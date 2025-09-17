@@ -1,0 +1,24 @@
+seed: 42
+env:
+  name: CartPole-v1
+  max_steps: 500
+algo:
+  name: dqn
+  gamma: 0.99
+  lr: 0.001
+  batch_size: 64
+  buffer_size: 50000
+  exploration:
+    eps_start: 1.0
+    eps_end: 0.05
+    eps_decay_steps: 20000
+train:
+  total_steps: 100000        # 总采样步数（每条 transition 记 1）
+  eval_interval: 5000
+  log_interval: 1000
+  save_interval: 10000
+runtime:
+  num_workers: 1             # =1 单机；>1 启动并行采样
+  device: "cpu"              # "cuda:0" 或 "cpu"
+  tb_dir: "experiments/logs"
+  ckpt_dir: "experiments/checkpoints"

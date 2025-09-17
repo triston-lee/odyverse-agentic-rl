@@ -1,0 +1,24 @@
+nav:
+  - 用 VERL（主线）:
+    - 00 目标与路线图: 00-intro.md
+    - 01 快速上手（单卡 PPO）: 01-quickstart.md
+    - 02 配置与超参速查: 02-config-cheatsheet.md
+    - 03 源码导览地图: 03-arch-tour.md
+    - 04 奖励工程（函数式奖励）: 04-reward-engineering.md
+    - 05 训练循环拆解（PPO）: 05-training-loop.md
+    - 06 多轮对话（SGLang）: 06-multiturn-rl.md
+    - 07 Tool 调用（多轮+工具）: 07-tool-calling.md
+    - 08 评测与对齐（离线指标）: 08-eval-metrics.md
+    - 09 多机扩展（Ray / SkyPilot）: 09-scaling-distributed.md
+    - 10 吞吐与显存优化: 10-performance-tuning.md
+    - 11 DPO/GRPO 与 RM: 11-preference-learning.md
+    - 12 导出与服务（vLLM/SGLang）: 12-deploy-and-serve.md
+    - 13 生产化与排错: 13-prod-troubleshooting.md
+    - 14 案例模板（复现报告）: 14-case-study-template.md
+    - 15 复现 Checklist: 15-repro-checklist.md
+  - 附录：Mini 框架（对照线）:
+    - A0 为什么做 Mini: A0-why-mini.md
+    - A1 架构对照表: A1-arch-map.md
+    - A2 数据流与日志: A2-dataflow.md
+    - A3 教学版多轮/工具: A3-multiturn-tool-mini.md
+    - A4 Ray 分布式 Buffer 占位: A4-ray-buffer-mini.md

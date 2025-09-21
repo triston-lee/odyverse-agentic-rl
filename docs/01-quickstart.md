@@ -11,7 +11,7 @@
 docker create --runtime=nvidia --gpus all --net=host --shm-size=10g \
   -v $PWD:/workspace/verl --name verl \
   verlai/verl:app-latest sleep infinity
-docker start verl && docker exec -it verl bash
+docker start verl && docker exec -it src bash
 
 # 容器内
 git clone https://github.com/volcengine/verl && cd verl
@@ -54,7 +54,7 @@ PY
 > 奖励函数位置位于[gsm8k.py](..%2Fverl%2Futils%2Freward_score%2Fgsm8k.py)
 
 ```bash
-PYTHONUNBUFFERED=1 python3 -m verl.trainer.main_ppo \
+PYTHONUNBUFFERED=1 python3 -m src.trainer.main_ppo \
  data.train_files=$HOME/data/gsm8k/train.parquet \
  data.val_files=$HOME/data/gsm8k/test.parquet \
  data.train_batch_size=256 \	# 
@@ -151,7 +151,7 @@ PYTHONUNBUFFERED=1 python3 -m verl.trainer.main_ppo \
 - （可选）合并到 Hugging Face 目录（便于推理服务）：
 
 ```bash
-python3 -m verl.model_merger merge \
+python3 -m src.model_merger merge \
   --backend fsdp \
   --local_dir checkpoints/<project>/<experiment>/global_step_1/actor \
   --target_dir checkpoints/<project>/<experiment>/global_step_1/actor/hf

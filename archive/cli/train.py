@@ -1,4 +1,4 @@
-# src/cli/train.py
+# archive/cli/train.py
 import argparse
 from pathlib import Path
 import time

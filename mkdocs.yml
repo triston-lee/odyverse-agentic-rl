@@ -15,7 +15,6 @@ nav:
     - 12 导出与服务（vLLM/SGLang）: 12-deploy-and-serve.md
     - 13 生产化与排错: 13-prod-troubleshooting.md
     - 14 案例模板（复现报告）: 14-case-study-template.md
-    - 15 复现 Checklist: 15-repro-checklist.md
   - 附录：Mini 框架（对照线）:
     - A0 为什么做 Mini: A0-why-mini.md
     - A1 架构对照表: A1-arch-map.md
